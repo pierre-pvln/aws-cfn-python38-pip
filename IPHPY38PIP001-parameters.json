@@ -9,7 +9,7 @@
   },
   {
     "ParameterKey": "IPHPY38PIPKeyName",
-    "ParameterValue": "anaconda-data-analytics"
+    "ParameterValue": "aisdata-reporting"
   },
   {
     "ParameterKey": "IPHPY38PIPInstanceType",
