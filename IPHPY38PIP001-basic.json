@@ -170,6 +170,7 @@
 								"touch /home/ubuntu/getting_install.txt\n",
                                 "wget -O /home/ubuntu/install.sh \"https://raw.githubusercontent.com/pierre-pvln/aws-cfn-python38-pip/master/install-py38-pip.sh\"\n",
 								"wget -O /home/ubuntu/install.sh \"https://raw.githubusercontent.com/pierre-pvln/aws-cfn-python38-pip/master/requirements.txt\"\n",
+								"wget -O /home/ubuntu/install.sh \"https://raw.githubusercontent.com/pierre-pvln/aws-cfn-python38-pip/master/run-python-script.sh\"\n",
 								"chmod +x /home/ubuntu/install.sh\n",
 								"touch /home/ubuntu/running_install.txt\n",
                                 "sudo /home/ubuntu/install.sh\n",
