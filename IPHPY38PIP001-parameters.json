@@ -1,0 +1,18 @@
+[
+  {
+    "ParameterKey": "IPHPY38PIPTemplateVersion",
+    "ParameterValue": "v001"
+  },
+  {
+    "ParameterKey": "IPHPY38PIPServerPrivateIP",
+    "ParameterValue": "10.0.1.5"
+  },
+  {
+    "ParameterKey": "IPHPY38PIPKeyName",
+    "ParameterValue": "anaconda-data-analytics"
+  },
+  {
+    "ParameterKey": "IPHPY38PIPInstanceType",
+    "ParameterValue": "t2.micro"
+  } 
+]
