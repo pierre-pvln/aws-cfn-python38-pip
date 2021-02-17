@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
+
 # create files with pyhton scripts
 touch /home/ubuntu/lambda_function_test.py
 touch /home/ubuntu/lambda_function.py
+
+# install python
 sudo apt-get install python3-pip -y
 sudo apt-get install python3-venv -y
 python3 -m pip install --user --upgrade pip
