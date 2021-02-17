@@ -4,3 +4,4 @@ pandas
 urllib3
 datetime
 awswrangler
+socket
