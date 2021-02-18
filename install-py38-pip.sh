@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# create folder for python apps
-mkdir /hume/ubuntu/app
-
 # install python
 sudo apt-get install python3-pip -y
 sudo apt-get install python3-venv -y

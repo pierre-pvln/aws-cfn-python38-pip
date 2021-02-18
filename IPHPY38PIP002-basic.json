@@ -247,6 +247,7 @@
                                 "touch /home/ubuntu/start_of_UserData.txt\n",
                                 "sudo apt-get update\n",
                                 "sudo apt-get upgrade -y\n",
+								"mkdir /home/ubuntu/app\n",
 								"touch /home/ubuntu/getting_install.txt\n",
                                 "wget -O /home/ubuntu/install.sh \"https://raw.githubusercontent.com/pierre-pvln/aws-cfn-python38-pip/master/install-py38-pip.sh\"\n",
 								"wget -O /home/ubuntu/requirements.txt \"https://raw.githubusercontent.com/pierre-pvln/aws-cfn-python38-pip/master/requirements.txt\"\n",
