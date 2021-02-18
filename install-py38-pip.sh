@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-# create files with pyhton scripts
-touch /home/ubuntu/lambda_function_test.py
-touch /home/ubuntu/lambda_function.py
+# create folder for python apps
+mkdir /hume/ubuntu/app
 
 # install python
 sudo apt-get install python3-pip -y
