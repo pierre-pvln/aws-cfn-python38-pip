@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+cd /home/ubuntu
+mkdir input
+mkdir output
+mkdir polygons
+git clone https://github.com/pierre-pvln/myPolygons.git polygons
 
 # install python
 sudo apt-get install python3-pip -y

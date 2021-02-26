@@ -4,3 +4,5 @@ pandas
 urllib3
 datetime
 awswrangler
+pysftp
+geopandas
