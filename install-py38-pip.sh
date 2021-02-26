@@ -1,26 +1,26 @@
 #!/usr/bin/env bash
 
 # create required folders
-DIR="~/input/"
+DIR="/home/ubuntu/input/"
 if [ ! -d "$DIR" ]; then
   # Take action if $DIR does not exist. #
-  mkdir -- parents "$DIR"
+  mkdir --parents "$DIR"
 fi
 
-DIR="~/output/"
+DIR="/home/ubuntu/output/"
 if [ ! -d "$DIR" ]; then
   # Take action if $DIR does not exist. #
-  mkdir -- parents "$DIR"
+  mkdir --parents "$DIR"
 fi
 
-DIR="~/polygons/"
+DIR="/home/ubuntu/polygons/"
 if [ ! -d "$DIR" ]; then
   # Take action if $DIR does not exist. #
-  mkdir -- parents "$DIR"
+  mkdir --parents "$DIR"
 fi
 
 # get the polygons
-git clone https://github.com/pierre-pvln/myPolygons.git ~/polygons
+git clone https://github.com/pierre-pvln/myPolygons.git /home/ubuntu/polygons
 
 # install python
 sudo apt-get install python3-pip -y
