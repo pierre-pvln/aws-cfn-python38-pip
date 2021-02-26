@@ -20,7 +20,7 @@ if [ ! -d "$DIR" ]; then
 fi
 
 # get the polygons
-git clone https://github.com/pierre-pvln/myPolygons.git ~\polygons
+git clone https://github.com/pierre-pvln/myPolygons.git ~/polygons
 
 # install python
 sudo apt-get install python3-pip -y
