@@ -85,6 +85,21 @@
             "Default": "",
             "Description": "Local AWS profile name to use for authentication and authorization"
         },
+        "IPHPY38PIPAWSjsonBucketName": {
+            "Type": "String",
+            "Default": "ais-datasets-json",
+            "Description": "S3 bucket name with json input files"
+        },
+        "IPHPY38PIPAWScsvBucketName": {
+            "Type": "String",
+            "Default": "ais-datasets-csv",
+            "Description": "S3 bucket name with csv output files"
+        },
+        "IPHPY38PIPAWSpolygonsBucketName": {
+            "Type": "String",
+            "Default": "ais-datasets-polygons",
+            "Description": "S3 bucket name with polygon input files"
+        },
         "IPHPY38PIPENVAWSSettingsBucketName": {
             "Type": "String",
             "Default": "",
@@ -145,9 +160,9 @@
 							  "s3:ListBucket"
 							],
 							"Resource": [
-							  "arn:aws:s3:::ais-datasets-json",
-							  "arn:aws:s3:::ais-datasets-csv",
-							  "arn:aws:s3:::ais-datasets-polygons"
+								{ "Fn::Sub": "arn:aws:s3:::${IPHPY38PIPAWSjsonBucketName}"},
+								{ "Fn::Sub": "arn:aws:s3:::${IPHPY38PIPAWScsvBucketName}"},
+								{ "Fn::Sub": "arn:aws:s3:::${IPHPY38PIPAWSpolygonsBucketName}"}
 							]
 						  },
 						  {

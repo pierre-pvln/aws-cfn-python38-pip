@@ -1,7 +1,7 @@
 [
   {
     "ParameterKey": "IPHPY38PIPTemplateVersion",
-    "ParameterValue": "v002"
+    "ParameterValue": "v003"
   },
   {
     "ParameterKey": "IPHPY38PIPServerPrivateIP",
@@ -20,8 +20,20 @@
     "ParameterValue": ""
   },
   {
+    "ParameterKey": "IPHPY38PIPAWSjsonBucketName",
+    "ParameterValue": "ais-datasets-json"
+  },
+  {
+    "ParameterKey": "IPHPY38PIPAWScsvBucketName",
+    "ParameterValue": "ais-datasets-csv"
+  }, 
+  {
+    "ParameterKey": "IPHPY38PIPAWSpolygonsBucketName",
+    "ParameterValue": "ais-datasets-polygons"
+  },   
+  {
     "ParameterKey": "IPHPY38PIPENVAWSSettingsBucketName",
-    "ParameterValue": "ais-dataset-csv"
+    "ParameterValue": "ais-datasets-csv"
   },   
   {
     "ParameterKey": "IPHPY38PIPENVAWSSettingsPrefixFilename",
