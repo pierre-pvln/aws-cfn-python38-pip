@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 cd /home/ubuntu
 su ubuntu
-echo ${SUDO_USER:-${USER}} >/home/ubuntu/install_user.txt
 
 # create required folders
 DIR="/home/ubuntu/input/"
