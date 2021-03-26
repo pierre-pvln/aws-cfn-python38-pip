@@ -171,9 +171,9 @@
 							  "s3:GetObject"
 							],
 							"Resource": [
-							  "arn:aws:s3:::ais-datasets-json/*",
-							  "arn:aws:s3:::ais-datasets-csv/*",
-							  "arn:aws:s3:::ais-datasets-polygons/*"
+								{ "Fn::Sub": "arn:aws:s3:::${IPHPY38PIPAWSjsonBucketName}/*"},
+								{ "Fn::Sub": "arn:aws:s3:::${IPHPY38PIPAWScsvBucketName}/*"},
+								{ "Fn::Sub": "arn:aws:s3:::${IPHPY38PIPAWSpolygonsBucketName}/*"}
 							]
 						  },
 						  {
@@ -182,7 +182,7 @@
 							  "s3:PutObject"
 							],
 							"Resource": [
-							  "arn:aws:s3:::ais-datasets-csv/*"
+								{ "Fn::Sub": "arn:aws:s3:::${IPHPY38PIPAWScsvBucketName}/*"}
 							]
 						  }
 						]
@@ -297,10 +297,10 @@
 								"echo \"AWS_SETTINGS_PATH=$AWS_SETTINGS_PATH\" >>/etc/environment\n",
 								"echo \"APP_DATE_TYPE=$APP_DATE_TYPE\" >>/etc/environment\n",
 								"chmod +x /home/ubuntu/*.sh\n",
-								"chown -R ubuntu:ubuntu /home/ubuntu/\n",
 								"touch /home/ubuntu/$( date '+%Y-%m-%d_%H-%M-%S' )_start_of_install\n",
 								"/home/ubuntu/install.sh\n",
 								"touch /home/ubuntu/$( date '+%Y-%m-%d_%H-%M-%S' )_end_of_install\n",
+								"chown -R ubuntu:ubuntu /home/ubuntu/\n",
 								"touch /home/ubuntu/$( date '+%Y-%m-%d_%H-%M-%S' )_end_of_UserData\n"
 							]	
                         ]

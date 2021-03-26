@@ -1,44 +1,67 @@
 #!/usr/bin/env bash
 touch $( date '+%Y-%m-%d_%H-%M-%S' )_app_started
 source env/bin/activate
-stop=0
+continue=true
 cd ~/app
 
-echo Running script 1
-echo ================
-python3 lambda_function_test.py
-if [ -z "$?" ]; then stop=1; fi
-
-if [ -z $stop ]
+if [[ "${continue}" == "true" ]]
 then
-    echo Running script 2
-    echo ================
+	echo "[INFO ] Running script 1"
+	echo "[INFO ] ================"
+	python3 lambda_function_test.py
+	if [ !$? -eq 0 ]
+		then
+			continue=false
+			echo "[ERROR] Ending script"
+	fi
+fi
+
+if [[ "${continue}" == "true" ]]
+then
+	echo "[INFO ] Running script 2"
+	echo "[INFO ] ================"
     python3 _2_extend_baseline.py
-    if [ -z "$?" ]; then stop=1; fi
+	if [ !$? -eq 0 ]
+		then
+			continue=false
+			echo "[ERROR] Ending script"
+	fi
 fi
 
-if [ -z $stop ]
+if [[ "${continue}" == "true" ]]
 then
-    echo Running script 3
-    echo ================
+	echo "[INFO ] Running script 3"
+	echo "[INFO ] ================"
     python3 _3_satistics_output.py
-    if [ -z "$?" ]; then stop=1; fi
+	if [ !$? -eq 0 ]
+		then
+			continue=false
+			echo "[ERROR] Ending script"
+	fi
 fi
 
-if [ -z $stop ]
+if [[ "${continue}" == "true" ]]
 then
-    echo Running script 4
-    echo ================
+	echo "[INFO ] Running script 4"
+	echo "[INFO ] ================"
     python3 _4_bsgw_format.py
-    if [ -z "$?" ]; then stop=1; fi
+	if [ !$? -eq 0 ]
+		then
+			continue=false
+			echo "[ERROR] Ending script"
+	fi
 fi
 
-if [ -z $stop ]
+if [[ "${continue}" == "true" ]]
 then
-    echo Running script 5
-    echo ================
+	echo "[INFO ] Running script 5"
+	echo "[INFO ] ================"
     python3 _5_sftp_to_server.py
-    if [ -z "$?" ]; then stop=1; fi
+	if [ !$? -eq 0 ]
+		then
+			continue=false
+			echo "[ERROR] Ending script"
+	fi
 fi
 
 deactivate
